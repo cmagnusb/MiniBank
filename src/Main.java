@@ -146,9 +146,9 @@ public class Main {
             return;
         }
 
-        System.out.print("Ange mottagarkonto: ");
+        System.out.print("Ange mottagarkonto: "); // Saknar förklaring på hur personnummer byggs upp.
         String toAccountNumber = scanner.nextLine();
-        System.out.print("Ange belopp: ");
+        System.out.print("Ange belopp: "); // Saknar hantering av ',' och '.'
         double amount = getDoubleInput();
 
         if (bank.transfer(fromAccount, toAccountNumber, amount)) {
@@ -157,15 +157,18 @@ public class Main {
             System.out.println("Överföringen misslyckades. Kontrollera kontonummer och saldo.");
         }
     }
-
+// Kod från AI (Har inte koll på hur parseInt fungerar. Kanske jag borde ha använt scanner.nextint)
+// https://codingtechroom.com/question/understanding-integer-parsing-in-java-integer-parseint-vs-scanner-nextint
     private static int getIntInput() {
         try {
             return Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
             return -1;
         }
-    }
 
+}
+// Kod från AI (Har inte koll på hur parseInt fungerar. Borde ha använt scanner.nextdouble)
+// Se ovan
     private static double getDoubleInput() {
         try {
             return Double.parseDouble(scanner.nextLine());

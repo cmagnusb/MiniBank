@@ -8,7 +8,8 @@ public class Bank {
     public Bank() {
         this.users = new ArrayList<>();
     }
-
+// Notera att jag har två createUser.
+// Den här är AI kod
     public boolean createUser(String personalNumber, String pin) {
         // Validera personnummer och PIN
         if (!isValidPersonalNumber(personalNumber) || !isValidPin(pin)) {
@@ -65,7 +66,7 @@ public class Bank {
         }
         return false;
     }
-
+// Object i parentesen i if-villkoret känns lite udda, men är  så som python skulle ha gjort det
     private Account findAccount(String accountNumber) {
         for (User user : users) {
             if (user.getSalaryAccount().getAccountNumber().equals(accountNumber)) {

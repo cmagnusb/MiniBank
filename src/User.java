@@ -5,6 +5,8 @@ public class User {
     private Account salaryAccount;
     private Account savingsAccount;
 
+    // Kanske personnummer borde kopplas till Lönekontot och sen slumpar jag fram ett sparkonto a la Nordea
+    // Borde ha testat initialBalance 0
     public User(String personalNumber, String pin) {
         this.personalNumber = personalNumber;
         this.pin = pin;
